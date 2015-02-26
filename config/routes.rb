@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/about' => 'static_pages#about'
 
   # USER CONTROLLER ROUTES
-  get '/users/new' => 'users#new'
+  get 'signup' => 'users#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
