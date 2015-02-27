@@ -8,9 +8,10 @@
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'favicon.ico' %>
 </head>
-<body>
+<body class="container">
 
 <%= yield %>
+<%= debug(params) if Rails.env.development? %>
 <%= render 'shared/footer' %>
 </body>
 </html>
