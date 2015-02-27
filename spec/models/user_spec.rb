@@ -44,5 +44,14 @@ RSpec.describe User, type: :model do
     expect(user.email).to eq(user.email.downcase)
   end
 
+  it "is invalid if the password is too short" do 
+    user = FactoryGirl.build(:user, password: "a" * 5)
+    expect(user).to be_invalid
+  end
+
+  it "is invalid if the password is too long" do
+    user = FactoryGirl.build(:user, password: "a" * 21)
+    expect(user).to be_invalid
+  end
 
 end
