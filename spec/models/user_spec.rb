@@ -25,6 +25,11 @@ RSpec.describe User, type: :model do
   	expect(user).to be_invalid
   end
 
+  it "is invalid if email has extra punctuation" do
+    user = FactoryGirl.build(:user, email: "percy@example..com")
+    expect(user).to be_invalid
+  end
+
   it "is invalid is the user tries to sign up with an email address that already exists in the database, regardless of capitalization" do
   	user = FactoryGirl.create(:user, email: "percival@example.com")
   	user1 = FactoryGirl.build(:user, email: "percival@example.com")
