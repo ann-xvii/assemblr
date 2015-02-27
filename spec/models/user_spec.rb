@@ -38,5 +38,11 @@ RSpec.describe User, type: :model do
   	expect(user).to be_invalid
   end
 
+  it "downcases the email before saving" do
+    user = FactoryGirl.build(:user, email: "MyEmAiL@eMaIl.com")
+    user.save
+    expect(user.email).to eq(user.email.downcase)
+  end
+
 
 end
