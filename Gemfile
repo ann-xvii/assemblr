@@ -13,6 +13,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.9'
+gem 'rails_serve_static_assets'
 gem 'quiet_assets', group: :development
 
 group :development, :test do
@@ -24,17 +25,16 @@ group :development, :test do
   gem 'spring'
   gem 'shoulda-matchers', require: false
   gem 'pry'
-end
-
-group :development, :test do
   gem 'rspec-rails', '~> 3.0'
 end
 
 gem 'factory_girl_rails'
 gem 'capybara'
-
-gem 'rails_12factor', group: :production
 gem 'rspec_junit_formatter', :github => 'circleci/rspec_junit_formatter', group: :test
 
-gem 'thin', group: :production
-gem 'rails_serve_static_assets'
+# gem 'thin', group: :production
+
+group :production do
+ gem 'puma', '~> 2.11.1'
+ gem 'rails_12factor'
+end

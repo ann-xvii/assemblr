@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 describe "the flow of the GA network page" do
 	it "loads the about page when you click About" do
 		visit "/"
