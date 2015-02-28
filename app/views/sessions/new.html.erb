@@ -15,10 +15,20 @@
 				<%= f.label :password %>
 				<%= f.password_field :password, class: 'form-control' %>
 			</div>
+
+			<div class="form-group">
+				<%= f.label :remember_me, class: "checkbox inline" do %>
+					<%= f.check_box :remember_me, id: "checkbox-style" %>
+					<span style="margin-left: 20px;">Remember me on this computer</span>
+				<% end %>
+			</div>
 			
-				<%= f.submit "Log the heck in!", class: "btn btn-primary" %>
+
+
+			<%= f.submit "Log the heck in!", class: "btn btn-primary" %>
+
 			<% end %>
-			<p>New to Assemblr? <%= link_to "Sign up now!", signup_path %></p>
+			<p id="paragraph-cta">New to Assemblr? <%= link_to "Sign up now!", signup_path %></p>
 		</div>
 	</div>
 
