@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 	
 $state-danger-text: rgba(255, 0, 0, 0.6);
-
+$gray-lighter: #cdcdcd;
 
   h2 {
 		font-weight: 300 !important;
@@ -80,5 +80,26 @@ input {
 .field_with_errors {
   .form-control {
     color: $state-danger-text;
+  }
+}
+
+.color-title {
+  color: black;
+  font-weight: 400;
+}
+.color-converse-title {
+  color: #d7ecff;
+}
+
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
   }
 }
