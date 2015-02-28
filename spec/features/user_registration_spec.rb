@@ -1,11 +1,15 @@
 require 'rails_helper'
 
+def get_sign_up
+	visit "/login"
+	click_link "Sign up now!"
+end
+
 describe 'Signing up' do 
 	it "allows a user to sign up for the site and creates an object in the database" do
 		expect(User.count).to eq(0)
 
-		visit "/"
-		click_link "Join"
+		get_sign_up
 		expect(page).to have_content("Sign up")
 
 		fill_in "Name", with: "Jabba the Hut"
@@ -19,8 +23,8 @@ describe 'Signing up' do
 
 	it "does not allow user to sign up with invalid email address" do
 		expect(User.count).to eq(0)
-		visit "/"
-		click_link "Join"
+
+		get_sign_up
 		expect(page).to have_content("Sign up")
 
 		fill_in "Name", with: "Jabba the Hut"
@@ -34,8 +38,8 @@ describe 'Signing up' do
 
 	it "does not allow user to sign up with password too short" do
 		expect(User.count).to eq(0)
-		visit "/"
-		click_link "Join"
+		
+		get_sign_up
 		expect(page).to have_content("Sign up")
 
 		fill_in "Name", with: "Jabba the Hut"
@@ -49,8 +53,8 @@ describe 'Signing up' do
 
 	it "does not allow user to sign up with invalid password" do
 		expect(User.count).to eq(0)
-		visit "/"
-		click_link "Join"
+
+		get_sign_up
 		expect(page).to have_content("Sign up")
 
 		fill_in "Name", with: "Jabba the Hut"

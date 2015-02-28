@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "Loggin in" do 
+describe "Logging in" do 
 	it "doesn't allow user to log in with invalid information" do
 		visit "/"
 		click_link "Log in"
