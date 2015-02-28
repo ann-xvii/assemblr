@@ -1,11 +1,10 @@
 <% provide(:title, "Generally Assembled Users") %>
 <h1 class="color-converse-title"><span class="color-title">General</span>ly <span class="color-title">Assembl</span>ed Use<span class="color-title">r</span>s</h1>
 
+<%= will_paginate %>
+
 <ul class="users">
-	<% @users.each do |user| %>
-		<li>
-			<%= gravatar_for user, size: 50 %>
-			<%= link_to user.name, user %>
-		</li>
-	<% end %>
+	<%= render @users %>
 </ul>
+
+<%= will_paginate %>
