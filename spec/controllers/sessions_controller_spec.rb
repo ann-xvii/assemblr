@@ -9,4 +9,10 @@ RSpec.describe SessionsController, type: :controller do
     end
   end
 
+  describe "Logging in" do
+	  it "doesn't allow user to log in with invalid information" do
+	  	
+	  end
+  end
+
 end
