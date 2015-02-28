@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'users/new'
+  # SESSIONS ROUTES
+  
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
 
   # STATIC PAGES ROUTES
   root 'static_pages#home'
@@ -9,11 +13,9 @@ Rails.application.routes.draw do
 
   # USER CONTROLLER ROUTES
   get 'signup' => 'users#new'
-  resources :users
+  resources :users, except: :new
 
-  get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
-  delete '/logout' => 'sessions#destroy'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

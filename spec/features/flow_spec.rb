@@ -7,9 +7,9 @@ describe "the flow of the GA network page" do
 		expect(page).to have_content "About General Assemblr"
 	end
 
-	it "loads the sign up page when you click Join" do
+	it "loads the sign up page when you click 'Log in'" do
 		visit "/"
-		click_link "Join"
+		click_link "Log in"
 		expect(page).to have_content "Sign up"
 	end
 
