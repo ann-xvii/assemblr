@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 	# validates :email, presence: true, length: { maximum: 255 }, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }, uniqueness: {case_sensitive: false }
 	validates :email, presence: true, length: { maximum: 255 }, format: { with: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i }, uniqueness: {case_sensitive: false }
 
-	validates :password, length: { in: 6..20 }
+	validates :password, length: { in: 6..20 }, allow_blank: true
 	has_secure_password
 
 	# Returns the hash digest of the given string
