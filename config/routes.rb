@@ -1,19 +1,20 @@
 Rails.application.routes.draw do
 
+  # STATIC PAGES ROUTES
+  root 'static_pages#home'
+  get '/help' => 'static_pages#help'
+  get '/about' => 'static_pages#about'
+
   # SESSIONS ROUTES
   
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
 
-  # STATIC PAGES ROUTES
-  root 'static_pages#home'
-  get '/help' => 'static_pages#help'
-  get '/about' => 'static_pages#about'
-
   # USER CONTROLLER ROUTES
   get 'signup' => 'users#new'
   resources :users, except: :new
+  resources :account_activations, only: [:edit]
 
 
 

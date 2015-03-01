@@ -1,13 +1,18 @@
 class User < ActiveRecord::Base
-	attr_accessor :remember_token
-	# standardize to lowercase email address address
-	before_save { self.email = email.downcase }
-	validates :name, presence: true, length: { maximum: 50 }
-	# validates :email, presence: true, length: { maximum: 255 }, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }, uniqueness: {case_sensitive: false }
-	validates :email, presence: true, length: { maximum: 255 }, format: { with: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i }, uniqueness: {case_sensitive: false }
+	attr_accessor :remember_token, :activation_token
+	
+  before_save :downcase_email
+  before_create :create_activation_digest
 
+	validates :name, presence: true, length: { maximum: 50 }
+	validates :email, presence: true, length: { maximum: 255 }, format: { with: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i }, uniqueness: {case_sensitive: false }
 	validates :password, length: { in: 6..20 }, allow_blank: true
+
 	has_secure_password
+
+
+
+
 
 	# Returns the hash digest of the given string
 	def User.digest(string)
@@ -36,5 +41,19 @@ class User < ActiveRecord::Base
     # Forgets a user
     def forget
       update_attribute(:remember_digest, nil)
+    end
+
+    private
+
+    # converts email to all lowercase
+    def downcase_email
+      self.email = email.downcase
+    end
+
+    # creates and assigns the activation token digest
+    def create_activation_digest
+      # the main purpose fo the before_create callback is to assign the token and corresponding digest
+      self.activation_token = User.new_token
+      self.activation_digest = User.digest(activation_token)
     end
 end
