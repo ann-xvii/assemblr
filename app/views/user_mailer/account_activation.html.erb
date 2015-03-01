@@ -1,4 +1,4 @@
-<h1>General Assemblr</h1>
+<h3>General Assemblr</h3>
 
 <p>Hi <%= @user.name %>,</p>
 
@@ -6,4 +6,4 @@
 	Welcome to General Assemblr! Click on the link below to activate your account:
 </p>
 
-<%= link_to "Activate", edit_account_activation_url(@user.activation_token, email: @user.email)
+<%= link_to "Activate", edit_account_activation_url(@user.activation_token, email: @user.email) %>
