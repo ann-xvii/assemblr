@@ -33,14 +33,29 @@ class User < ActiveRecord::Base
   	end
 
     # Returns true if the given token matches the digest
-    def authenticated?(remember_token)
-      return false if remember_digest.nil?
-      BCrypt::Password.new(remember_digest).is_password?(remember_token)
+
+    def authenticated?(attribute, token)
+      # digest = self.send("#{attribute}_digest")  inside model, it is more idiomatically correct to omit self
+      digest = send("#{attribute}_digest")
+      return false if digest.nil?
+      BCrypt::Password.new(digest).is_password?(token)
     end
 
     # Forgets a user
     def forget
       update_attribute(:remember_digest, nil)
+    end
+
+    # Activates an account
+    def activate
+      # self is optional inside the model
+      update_attribute(:activated, true)
+      update_attribute(:activated_at, Time.zone.now)
+    end
+
+    # Sends activation email
+    def send_activation_email
+      UserMailer.account_activation(self).deliver_now
     end
 
     private
