@@ -1,5 +1,24 @@
 <% provide(:title, "Home") %>
+<% if logged_in? %>
+	<div class="row">
+		<aside class="col-md-4">
+			<section class="user_info">
+				<%= render 'shared/user_info' %>
+			</section>
+			<section class="micropost_form">
+				<%= render "shared/micropost_form" %>
+			</section>
+		</aside>
+		<div class="col-md-8">
+			<h3>Assembl<span class="color-converse-title">e</span>d Posts</h3>
+			<%= render 'shared/feed' %>
+		</div>
+	</div>
+<% else %>
+
 <div class="container">
 	<h1>Welcome to General Assemblr</h1>
 	<p>Some riveting text will go here.</p>	
 </div>
+
+<% end %>

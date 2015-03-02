@@ -19,6 +19,13 @@ gem 'bootstrap-will_paginate', '~> 0.0.10'
 gem 'rails_serve_static_assets'
 gem 'quiet_assets', group: :development
 
+# add image upload capability
+gem 'carrierwave', '~> 0.10.0'
+gem 'mini_magick', '~> 4.1.0'
+gem 'rmagick', '~> 2.13.4'
+gem 'fog', '~> 1.28.0'
+gem 'figaro'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
