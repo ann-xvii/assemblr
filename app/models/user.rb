@@ -17,66 +17,72 @@ class User < ActiveRecord::Base
 
 
 
-	# Returns the hash digest of the given string
-	def User.digest(string)
-    	cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
-                                                  BCrypt::Engine.cost
-    	BCrypt::Password.create(string, cost: cost)
-  	end
+# Returns the hash digest of the given string
+def User.digest(string)
+	cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
+                                              BCrypt::Engine.cost
+	BCrypt::Password.create(string, cost: cost)
+end
 
-  	# Return a random token
-  	def User.new_token
-  		SecureRandom.urlsafe_base64
-  	end
+# Return a random token
+def User.new_token
+	SecureRandom.urlsafe_base64
+end
 
-  	# Remembers a user in the database for use in persistent sessions
-  	def remember
-  		self.remember_token = User.new_token
-  		update_attribute(:remember_digest, User.digest(remember_token))
-  	end
+# Remembers a user in the database for use in persistent sessions
+def remember
+	self.remember_token = User.new_token
+	update_attribute(:remember_digest, User.digest(remember_token))
+end
 
-    # Returns true if the given token matches the digest
+# Returns true if the given token matches the digest
 
-    def authenticated?(attribute, token)
-      # digest = self.send("#{attribute}_digest")  inside model, it is more idiomatically correct to omit self
-      digest = send("#{attribute}_digest")
-      return false if digest.nil?
-      BCrypt::Password.new(digest).is_password?(token)
-    end
+def authenticated?(attribute, token)
+  # digest = self.send("#{attribute}_digest")  inside model, it is more idiomatically correct to omit self
+  digest = send("#{attribute}_digest")
+  return false if digest.nil?
+  BCrypt::Password.new(digest).is_password?(token)
+end
 
-    # Forgets a user
-    def forget
-      update_attribute(:remember_digest, nil)
-    end
+# Forgets a user
+def forget
+  update_attribute(:remember_digest, nil)
+end
 
-    # Activates an account
-    def activate
-      # self is optional inside the model
-      update_attribute(:activated, true)
-      update_attribute(:activated_at, Time.zone.now)
-    end
+# Activates an account
+def activate
+  # self is optional inside the model
+  update_attribute(:activated, true)
+  update_attribute(:activated_at, Time.zone.now)
+end
 
-    # Sends activation email
-    def send_activation_email
-      UserMailer.account_activation(self).deliver_now
-    end
+# Sends activation email
+def send_activation_email
+  UserMailer.account_activation(self).deliver_now
+end
 
-    # Sets the password reset attributes
-    def create_reset_digest
-      self.reset_token = User.new_token
-      update_attribute(:reset_digest, User.digest(reset_token))
-      update_attribute(:reset_sent_at, Time.zone.now)
-    end
+# Sets the password reset attributes
+def create_reset_digest
+  self.reset_token = User.new_token
+  update_attribute(:reset_digest, User.digest(reset_token))
+  update_attribute(:reset_sent_at, Time.zone.now)
+end
 
-    # Sends password reset email
-    def send_password_reset_email
-      UserMailer.password_reset(self).deliver_now
-    end
+# Sends password reset email
+def send_password_reset_email
+  UserMailer.password_reset(self).deliver_now
+end
 
-    # Returns true if a password reset has expired
-    def password_reset_expired?
-      reset_sent_at < 2.hours.ago
-    end
+# Returns true if a password reset has expired
+def password_reset_expired?
+  reset_sent_at < 2.hours.ago
+end
+
+# Defines a user feed
+def feed
+  # ALWAYS ESCAPE VARIABLES INJECTED INTO SQL STATEMENTS! 
+  Micropost.where("user_id = ?", id)
+end
 
     private
 

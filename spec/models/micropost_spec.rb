@@ -50,11 +50,12 @@ RSpec.describe Micropost, type: :model do
   	expect(micropost.user.email).to eq('email@email.com')
   end
 
-  # it "returns the most recent micropost first" do
-  # 	user = FactoryGirl.create(:user, name: 'miguel', email: 'email@email.com', password: 'password')
-  # 	micropost = FactoryGirl.create(:micropost, content: "Here is my content, yay!", user_id: user.id)
-  # 	micropost1 = FactoryGirl.create(:micropost, content: "Second post or first!", user_id: user.id)
-  # 	micropost2 = FactoryGirl.create(:micropost, content: "Third post or second!", user_id: user.id)
-  # end
+  it "returns the most recent micropost first" do
+  	user = FactoryGirl.create(:user, name: 'miguel', email: 'email@email.com', password: 'password')
+  	micropost = FactoryGirl.create(:micropost, content: "Here is my content, yay!", user_id: user.id)
+  	micropost1 = FactoryGirl.create(:micropost, content: "Second post or first!", user_id: user.id)
+  	micropost2 = FactoryGirl.create(:micropost, content: "Third!", user_id: user.id)
+    expect(user.microposts.first).to eq(micropost2)
+  end
 
 end
