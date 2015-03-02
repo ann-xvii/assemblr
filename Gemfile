@@ -22,6 +22,7 @@ gem 'quiet_assets', group: :development
 # add image upload capability
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 4.1.0'
+gem 'rmagick', '~> 2.13.4'
 gem 'fog', '~> 1.28.0'
 
 group :development, :test do
