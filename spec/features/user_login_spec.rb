@@ -14,4 +14,7 @@ describe "Logging in" do
 		# visit root_path
 		# expect(flash[:danger]).to be_nil
 	end
+
+	it "has a forgot password link"
+	it "redirects to user profile on successful login"
 end
