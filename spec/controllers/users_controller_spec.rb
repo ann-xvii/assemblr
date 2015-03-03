@@ -9,6 +9,7 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
+
   # ADD A CONTEXT FOR WHEN USER IS LOGGED IN, AND ONE FOR WHEN USER IS NOT LOGGED IN
   # describe "GET #index" do
   # 	it "returns http success" do 
