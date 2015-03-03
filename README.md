@@ -1,1 +1,3 @@
-### Project 3, version 2.0.0!!
+### Welcome to General Assemblr 2.0
+#### better, faster, stronger
+#### new features, cleaner interface!
