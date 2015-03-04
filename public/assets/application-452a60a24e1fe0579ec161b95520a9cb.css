@@ -1,68 +1,134 @@
-@charset "UTF-8";/* line 5, /Users/AOA/weeks-in-review/13-week/project-3-redux/general_assemblr/app/assets/stylesheets/sessions.scss */
+@charset "UTF-8";/* line 5, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/account_activations.scss */
+body {
+  font-family: Roboto;
+}
+/* line 5, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/sessions.scss */
 h1 {
   text-align: center;
 }
 
-/* line 9, /Users/AOA/weeks-in-review/13-week/project-3-redux/general_assemblr/app/assets/stylesheets/sessions.scss */
+/* line 9, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/sessions.scss */
 #checkbox-style {
   margin-left: 0;
 }
 
-/* line 13, /Users/AOA/weeks-in-review/13-week/project-3-redux/general_assemblr/app/assets/stylesheets/sessions.scss */
+/* line 13, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/sessions.scss */
 #paragraph-cta {
   margin-top: 10px;
 }
 
-/* line 17, /Users/AOA/weeks-in-review/13-week/project-3-redux/general_assemblr/app/assets/stylesheets/sessions.scss */
+/* line 17, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/sessions.scss */
 label {
   font-weight: normal !important;
 }
 
-/* line 21, /Users/AOA/weeks-in-review/13-week/project-3-redux/general_assemblr/app/assets/stylesheets/sessions.scss */
+/* line 21, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/sessions.scss */
 .checkbox {
   margin-top: -10px;
   margin-bottom: 10px;
 }
-/* line 24, /Users/AOA/weeks-in-review/13-week/project-3-redux/general_assemblr/app/assets/stylesheets/sessions.scss */
+/* line 24, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/sessions.scss */
 .checkbox span {
   margin-left: 20px;
   font-weight: normal;
 }
 
-/* line 30, /Users/AOA/weeks-in-review/13-week/project-3-redux/general_assemblr/app/assets/stylesheets/sessions.scss */
+/* line 30, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/sessions.scss */
 #session_remember_me {
   width: auto;
   margin-left: 0;
 }
-/* line 8, /Users/AOA/weeks-in-review/13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+/* line 7, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/static_pages.scss */
+h3 {
+  font-weight: 400 !important;
+  font-style: normal;
+}
+
+/* line 12, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/static_pages.scss */
+h3.about-page-style {
+  text-align: center;
+}
+
+/* line 16, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/static_pages.scss */
+.bios {
+  text-align: center;
+}
+
+/* line 20, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/static_pages.scss */
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+}
+/* line 24, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/static_pages.scss */
+.stats a {
+  float: left;
+  padding: 0 10px;
+  border-left: 1px solid #cdcdcd;
+  color: gray;
+}
+/* line 29, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/static_pages.scss */
+.stats a:first-child {
+  padding-left: 0;
+  border: 0;
+}
+/* line 33, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/static_pages.scss */
+.stats a:hover {
+  text-decoration: none;
+  color: blue;
+}
+/* line 38, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/static_pages.scss */
+.stats strong {
+  display: block;
+}
+
+/* line 43, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/static_pages.scss */
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+}
+/* line 46, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/static_pages.scss */
+.user_avatars .gravatar {
+  margin: 1px 1px;
+}
+/* line 49, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/static_pages.scss */
+.user_avatars a {
+  padding: 0;
+}
+
+/* line 54, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/static_pages.scss */
+.users.follow {
+  padding: 0;
+}
+/* line 9, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
 h2 {
   font-weight: 300 !important;
   font-style: normal !important;
-  color: pink !important;
+  color: #d7ecff !important;
 }
 
 /* sidebar */
-/* line 23, /Users/AOA/weeks-in-review/13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+/* line 24, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
 aside section.user_info {
   margin-top: 20px;
 }
-/* line 26, /Users/AOA/weeks-in-review/13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+/* line 27, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
 aside section {
   padding: 10px 0;
   margin-top: 20px;
 }
-/* line 29, /Users/AOA/weeks-in-review/13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+/* line 30, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
 aside section:first-child {
   border: 0;
   padding-top: 0;
 }
-/* line 33, /Users/AOA/weeks-in-review/13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+/* line 34, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
 aside section span {
   display: block;
   margin-bottom: 3px;
   line-height: 1;
 }
-/* line 38, /Users/AOA/weeks-in-review/13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+/* line 39, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
 aside section h1 {
   font-size: 1.4em;
   font-size: 1.9em;
@@ -72,19 +138,19 @@ aside section h1 {
   margin-top: 0px;
 }
 
-/* line 49, /Users/AOA/weeks-in-review/13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+/* line 50, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
 .gravatar {
   float: left;
   margin-right: 10px;
 }
 
-/* line 54, /Users/AOA/weeks-in-review/13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+/* line 55, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
 .gravatar_edit {
   margin-top: 15px;
 }
 
 /* forms */
-/* line 60, /Users/AOA/weeks-in-review/13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+/* line 61, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
@@ -94,24 +160,102 @@ input, textarea, select, .uneditable-input {
   box-sizing: border-box;
 }
 
-/* line 67, /Users/AOA/weeks-in-review/13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+/* line 68, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
 input {
   height: auto !important;
 }
 
-/* line 72, /Users/AOA/weeks-in-review/13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+/* line 73, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
 #error_explanation {
   color: red;
 }
-/* line 74, /Users/AOA/weeks-in-review/13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+/* line 75, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
 #error_explanation ul {
   color: red;
   margin: 0 0 30px 0;
 }
 
-/* line 81, /Users/AOA/weeks-in-review/13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+/* line 82, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
 .field_with_errors .form-control {
   color: rgba(255, 0, 0, 0.6);
+}
+
+/* line 87, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+.color-title {
+  color: black;
+  font-weight: 400;
+}
+
+/* line 91, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+.color-converse-title {
+  color: #d7ecff;
+}
+
+/* Users index */
+/* line 98, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+.users {
+  list-style: none;
+  margin: 0;
+}
+/* line 101, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+.users li {
+  overflow: auto;
+  padding: 10px 0;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+/* microposts */
+/* line 111, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+.microposts {
+  list-style: none;
+  padding: 0;
+}
+/* line 114, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+.microposts li {
+  padding: 10px 0;
+  border-top: 1px solid #e8e8e8;
+}
+/* line 118, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+.microposts .user {
+  margin-top: 5em;
+  padding-top: 0;
+}
+/* line 122, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+.microposts .content {
+  display: block;
+  margin-left: 60px;
+}
+/* line 125, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+.microposts .content img {
+  display: block;
+  padding: 5px 0;
+}
+/* line 130, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+.microposts .timestamp {
+  color: #ababab;
+  display: block;
+  margin-left: 60px;
+}
+/* line 135, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+.microposts .gravatar {
+  float: left;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+/* line 143, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+aside textarea {
+  height: 100px;
+  margin-bottom: 5px;
+}
+
+/* line 149, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+span.picture {
+  margin-top: 10px;
+}
+/* line 151, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/users.scss */
+span.picture input {
+  border: 0;
 }
 
 /*
@@ -8670,7 +8814,7 @@ button.close {
     display: none !important;
   }
 }
-/* line 34, /Users/AOA/weeks-in-review/13-week/project-3-redux/general_assemblr/app/assets/stylesheets/application.css.scss */
+/* line 36, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/application.css.scss */
 .debug_dump {
   clear: both;
   float: left;
@@ -8681,13 +8825,65 @@ button.close {
   box-sizing: border-box;
 }
 
-/* line 44, /Users/AOA/weeks-in-review/13-week/project-3-redux/general_assemblr/app/assets/stylesheets/application.css.scss */
+/* line 46, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/application.css.scss */
 body {
   padding-bottom: 70px;
   font-family: Roboto, sans-serif;
 }
-/* line 49, /Users/AOA/weeks-in-review/13-week/project-3-redux/general_assemblr/app/assets/stylesheets/application.css.scss */
+/* line 51, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/application.css.scss */
 body h1 {
   font-weight: 300;
   font-style: normal;
+}
+
+/* line 61, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/application.css.scss */
+.color-converse-title {
+  color: #d7ecff;
+}
+
+/* line 66, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/application.css.scss */
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+}
+/* line 70, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/application.css.scss */
+.stats a {
+  float: left;
+  padding: 0 10px;
+  border-left: 1px solid #cdcdcd;
+  color: gray;
+}
+/* line 75, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/application.css.scss */
+.stats a:first-child {
+  padding-left: 0;
+  border: 0;
+}
+/* line 79, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/application.css.scss */
+.stats a:hover {
+  text-decoration: none;
+  color: blue;
+}
+/* line 84, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/application.css.scss */
+.stats strong {
+  display: block;
+}
+
+/* line 89, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/application.css.scss */
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+}
+/* line 92, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/application.css.scss */
+.user_avatars .gravatar {
+  margin: 1px 1px;
+}
+/* line 95, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/application.css.scss */
+.user_avatars a {
+  padding: 0;
+}
+
+/* line 100, /Users/AOA/weeks-in-review/in-13-week/project-3-redux/general_assemblr/app/assets/stylesheets/application.css.scss */
+.users.follow {
+  padding: 0;
 }
