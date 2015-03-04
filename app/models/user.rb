@@ -93,7 +93,11 @@ end
 # Defines a user feed
 def feed
   # ALWAYS ESCAPE VARIABLES INJECTED INTO SQL STATEMENTS! 
-  Micropost.where("user_id = ?", id)
+  # push set logic into the database
+  following_ids = "SELECT followed_id FROM relationships
+                   WHERE follower_id = :user_id"
+  Micropost.where("user_id IN (#{following_ids})
+                   OR user_id = :user_id", user_id: id)
 end
 
 # SOCIAL LAYER
