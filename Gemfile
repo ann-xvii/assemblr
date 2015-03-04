@@ -40,6 +40,7 @@ end
 
 gem 'factory_girl_rails'
 gem 'capybara'
+gem 'database_cleaner', '~> 1.4.0'
 gem 'rspec_junit_formatter', :github => 'circleci/rspec_junit_formatter', group: :test
 
 # gem 'thin', group: :production

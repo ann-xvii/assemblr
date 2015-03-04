@@ -59,4 +59,15 @@ RSpec.describe User, type: :model do
     expect(user).to be_invalid
   end
 
+  it "should follow and unfollow a user" do
+    riri = FactoryGirl.create(:user, email: "riri@hotmail.com")
+    matangi = FactoryGirl.create(:user, email: "mia@revolution.com")
+    expect(riri.following?(matangi)).to be_falsey
+    riri.follow(matangi)
+    expect(riri.following?(matangi)).to be_truthy
+    expect(matangi.followers.include?(riri))
+    riri.unfollow(matangi)
+    expect(riri.following?(matangi)).to be_falsey
+  end
+
 end
