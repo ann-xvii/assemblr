@@ -54,3 +54,164 @@ h3.about-page-style {
 .users.follow {
   padding: 0;
 }
+
+.front-page-home {
+  font-family: 'PF Din Text Comp Pro';
+}
+
+
+// Navbar, header, image styling
+.navbar-brand > img {
+  display: inline-block !important;
+}
+
+img.ga_logo {
+    margin-top: -5px;
+    margin-right: 0;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+.navbar-brand.logo-pic {
+    font-family: 'PF Din Text Comp Pro';
+    display: inline-block;
+    width: 360px;
+    color: rgb(255,255,255) !important;
+    font-size: 1.8em;
+    font-weight: 100;
+}
+
+
+// header and background image style 
+header {
+  // border-bottom: 1px solid rgb(0,0,0);
+  // background: image-url('bw_globe.jpg') no-repeat;
+  background-size: cover;
+  // margin-top: 100px;
+  color: rgba(255,255,255, 1);
+
+  h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 186px !important;
+  }
+
+  p {
+    text-align: center;
+    font-family: "Century Gothic", Helvetica;
+    font-size: 2em;
+    font-weight: lighter;
+    margin-top: 40px;
+    margin-bottom: 200px;
+     
+  }
+
+  button.btn.btn-danger {
+    text-align: center;
+    width: 200px; 
+  }
+
+}
+
+.header {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: image-url('bg.jpg') no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    // font-weight: 700;
+}
+
+/* Custom Button Styles */
+
+.btn-dark {
+    border-radius: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.btn-light {
+    border-radius: 0;
+    color: #333;
+    background-color: rgb(255,255,255);
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+    color: #333;
+    background-color: rgba(255,255,255,0.8);
+}
+
+/* Custom Horizontal Rule */
+
+hr.small {
+    max-width: 100px;
+}
+
+#general-assemblr-h1 {
+  padding-top: 70px;
+}
+
+h2.ga-tag {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  // font-weight: 500px;
+  line-height: 1.1;
+  color: rgba(0, 0, 0, 1) !important;
+}
+
+/* About */
+
+.about {
+    padding: 50px 0;
+}
+
+/* Services */
+
+.services {
+    padding: 50px 0;
+}
+
+.service-item {
+    margin-bottom: 30px;
+}
+
+/* Callout */
+
+.callout {
+    display: table;
+    width: 100%;
+    height: 400px;
+    color: #fff;
+    background: image-url('callout.jpg') no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}

@@ -8,7 +8,8 @@
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'favicon.ico' %>
 </head>
-<body class="container">
+<body>
+<%= render 'shared/navigation' %>
 <% flash.each do |message_type, message| %>
 	<div class="alert alert-<%= message_type %>"><%= message %></div>
 <% end %>

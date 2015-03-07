@@ -1,5 +1,6 @@
 <% provide(:title, "Home") %>
 <% if logged_in? %>
+<div class="log-in-style container">
 	<div class="row">
 		<aside class="col-md-4">
 			<section class="user_info">
@@ -17,11 +18,9 @@
 			<%= render 'shared/feed' %>
 		</div>
 	</div>
+</div>
 <% else %>
 
-<div class="container">
-	<h1>Welcome to General Assemblr</h1>
-	<p>Some riveting text will go here.</p>	
-</div>
+<%= render 'static_pages/original_home' %>
 
 <% end %>
