@@ -1,5 +1,5 @@
 
-<div id="profiles-page">
+<div id="profiles-page" class="profiles-main">
 <h1>The GA Network</h1>
 
 <!-- the input fields that will hold the variables we will use -->  
@@ -8,10 +8,10 @@
   
 <!-- Content div. The child elements will be used for paginating(they don't have to be all the same,  
     you can use divs, paragraphs, spans, or whatever you like mixed together). '-->  
-<ul id='content'></ul>  
+<ul id='content' class="col-lg-offset-4 col-lg-4 profiles-section"></ul>  
   
 <!-- An empty div which will be populated using jQuery -->  
-<div id='page_navigation'></div>
+<div id='page_navigation' class="col-lg-offset-4 col-lg-4 text-center"></div>
 </div>
 
 
@@ -71,14 +71,14 @@
 				for (var j = 0; j < data[i].length; j++) {
 					// console.log(data[i][j]);
 
-					var profilesDiv = '<li>'
+					var profilesDiv = '<li class="profiles-info">'
 					profilesDiv += '<img src="' + data[i][j].image + '" width="100px" heigth="200px">';
-					profilesDiv += '<p>' + data[i][j].name + '</p>';
+					profilesDiv += '<p class="profiles-name">' + data[i][j].name + '</p>';
 					profilesDiv += '<p>' + data[i][j].title + '</p>';
 					
 					$("#content").append(profilesDiv);
 					    //how much items per page to show  
-					    var show_per_page = 20;  
+					    var show_per_page = 30;  
 					    //getting the amount of elements inside content div  
 					    var number_of_items = $('#content').children().size();
 					    //calculate the number of pages we are going to have  
