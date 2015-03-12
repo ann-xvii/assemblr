@@ -1,3 +1,33 @@
 // Place all the styles related to the profiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.profiles-main {
+	background: image-url('giphy.gif') no-repeat center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	z-index: -99;
+	position: absolute;
+}
+
+.profiles-section {
+	overflow-y: auto;
+	height: 400px;
+}
+
+.profiles-info {
+	border: 1px solid black;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 10px;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.5);
+	img {
+		border-radius: 10px;
+		border: 1px solid black;
+	}
+	.profiles-name {
+		color: tomato;
+	}
+}
